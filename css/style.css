@@ -550,23 +550,105 @@ h1 {
 }
 
 /* МОДАЛЬНОЕ ОКНО */
+/* Подложка под модального окна(фон) */
 .backdrop {
   position: fixed;
   left: 0;
   top: 0;
   display: flex;
-  align-content: center;
-  justify-items: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+/* описание формы модального окна */
 .modal-form {
   width: 528px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   padding: 40px;
+  position: relative;
+}
+
+/* Стилизация заголовка формы */
+.modal-form-title {
+  margin-bottom: 30px;
+}
+.modal-form-conect {
+  position: relative;
+}
+/* Общая стилизация инпутов */
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+/* для иконки ИМЯ,ТЕЛЕФОН, МЕЙЛ */
+.icon-form-name,
+.icon-form-phone,
+.icon-form-mail {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+/* позиционирование лейбла  ИМЯ,ТЕЛЕФОН,МЕИЛ */
+.modal-form-lable-name,
+.modal-form-label-phone,
+.modal-form-label-mail {
+  position: absolute;
+  top: 10%;
+  left: 42px;
+  font-size: 14px;
+  color: var(--subtext-color);
+  letter-spacing: 0.01em;
+}
+.modal-form-input:focus,
+.modal-form-input:hover {
+  outline: none;
+  border: 1px solid #2196f3;
+  padding-left: 40px;
+}
+.modal-form-conect:focus-within icon-form-name {
+  fill: var(--accent-color);
+}
+
+/* Стилизация rextarea */
+.modal-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+/* стилизация плейсхолдера в модал меседж */
+.modal-message::placeholder {
+  padding: 12px 16px;
+}
+/* Стилизация соглашения на рассылку */
+.modal-form-optional-label {
+  margin-bottom: 30px;
+}
+
+/*Стилизация соглашения на рассылку */
+.modal-form-option-span {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+.modal-form-option-span > a {
+  color: var(--accent-color);
+}
+/* Стилизация кнопки на форме */
+.button-modal {
+  transform: translateX(60%);
 }
 
 /* Портфолио */
