@@ -242,7 +242,7 @@
           >
           <address>
             <ul>
-              <li>
+              <li class="footer-address-li">
                 <a
                   href="https://goo.gl/maps/PsE4YKg6dr8k7Q8X9"
                   class="footer-address"
@@ -250,12 +250,12 @@
                   г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li>
+              <li class="footer-address-li">
                 <a href="mailto:info@example.com" class="footer-mail"
                   >info@example.com</a
                 >
               </li>
-              <li>
+              <li class="footer-address-li">
                 <a href="tel:+380961111111" class="footer-tel"
                   >+38 096 111 11 11</a
                 >
@@ -293,11 +293,17 @@
           </ul>
         </div>
         <div class="footer-block">
-          <h4 class="call-to-action">Подпишитесь на рассылку</h4>
-
-          <button class="button button-send">
-            Подписаться
-          </button>
+          <form>
+            <h4 class="call-to-action">Подпишитесь на рассылку</h4>
+            <input
+              type="email"
+              class="footer-block-call-to-action"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="button button-send">
+              Подписаться
+            </button>
+          </form>
         </div>
       </div>
     </footer>

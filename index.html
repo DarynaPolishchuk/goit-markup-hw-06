@@ -336,13 +336,13 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-block-logo">
-          <a href="index.html" lang="en" class="logo link fon"
+          <a href="index.html" lang="en" class="logo link fon footer-logo"
             ><span class="logo-web">Web</span
             ><span class="logo-studio">Studio</span></a
           >
           <address>
             <ul>
-              <li>
+              <li class="footer-address-li">
                 <a
                   href="https://goo.gl/maps/PsE4YKg6dr8k7Q8X9"
                   class="footer-address"
@@ -350,12 +350,12 @@
                   г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li>
+              <li class="footer-address-li">
                 <a href="mailto:info@example.com" class="footer-mail"
                   >info@example.com</a
                 >
               </li>
-              <li>
+              <li class="footer-address-li">
                 <a href="tel:+380961111111" class="footer-tel"
                   >+38 096 111 11 11</a
                 >
@@ -393,13 +393,46 @@
           </ul>
         </div>
         <div class="footer-block">
-          <h4 class="call-to-action">Подпишитесь на рассылку</h4>
-
-          <button class="button button-send">
-            Подписаться
-          </button>
+          <form class="contact-form">
+            <h4 class="call-to-action">Подпишитесь на рассылку</h4>
+            <input
+              type="email"
+              class="footer-block-call-to-action"
+              placeholder="E-mail"
+              name="user-email"
+            />
+            <button type="submit" class="button button-send">
+              Подписаться
+            </button>
+          </form>
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <form action="" class="modal-form">
+        <h2 class="modal-form-title">
+          Оставьте свои данные, мы вам перезвоним
+        </h2>
+        <label>
+          <input class="modal-form-input" type="text" />
+        </label>
+        <label>
+          <input class="modal-form-input" type="text" />
+        </label>
+        <label>
+          <input class="modal-form-input" type="text" />
+        </label>
+
+        <textarea class="modal-message" cols="30" rows="10"> </textarea>
+        <label for="" class="modal-form-optional-label">
+          <input class="modal-form-checkbox" type="checkbox" name="" id="" />
+          <span class="modal-form-option-span">
+            Соглашаюсь с рассылкой и принимаю
+            <a href="#">Условия договора</a></span
+          >
+        </label>
+        <button type="submit" class="button">Отправить</button>
+      </form>
+    </div>
   </body>
 </html>

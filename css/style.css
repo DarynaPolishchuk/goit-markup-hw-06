@@ -413,6 +413,8 @@ h1 {
 }
 
 /*Footer*/
+
+/* общий класс для всего футера */
 .footer {
   background-color: #2f303a;
 }
@@ -420,12 +422,24 @@ h1 {
   display: flex;
   align-items: baseline;
 }
+
+/* Контейнер с лого и адресом */
 .footer-block-logo {
   margin-top: 60px;
   margin-bottom: 60px;
   margin-right: 69px;
 }
-.footer-block {
+/* Отступ от логотипа в футере */
+.footer-block-logo > address {
+  margin-top: 20px;
+}
+
+/* Отступ в футере в адресе между елементами */
+.footer-address-li {
+  margin-bottom: 9px;
+}
+/*Контейнер в футере с соц сетями */
+.footer-block:not(:last-child) {
   /* margin-top: 72px; */
   margin-right: 69px;
 }
@@ -440,6 +454,7 @@ h1 {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--white-color);
+  margin-bottom: 9px;
 }
 
 /* соц сети в футере */
@@ -476,6 +491,7 @@ h1 {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
+/* заголовоки в футере */
 .call-to-action {
   font-weight: bold;
   line-height: 1.14;
@@ -484,10 +500,29 @@ h1 {
   color: var(--white-color);
   margin-bottom: 20px;
 }
+/* Инпут для футера для отправки мейла */
+.footer-block-call-to-action {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border-radius: 4px;
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
 
+.footer-block-call-to-action:focus {
+  outline: none;
+}
+/* Стилизация плейсхолдера в футере */
+.footer-block-call-to-action::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 /* кнопка Подписаться в футере */
 .button-send {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
@@ -497,6 +532,7 @@ h1 {
 .button-send:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  outline: none;
 
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -511,6 +547,26 @@ h1 {
   width: 24px;
   height: 24px;
   background-image: url("../image/icon/send.svg");
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-form {
+  width: 528px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 40px;
 }
 
 /* Портфолио */
