@@ -413,32 +413,42 @@
         <h2 class="modal-form-title">
           Оставьте свои данные, мы вам перезвоним
         </h2>
-        <div>
-          <label class="modal-form-conect">
-            <svg class="icon-form-name" width="18" height="18">
-              <use href="./image/sprite.svg#icon-form-name"></use>
-            </svg>
-            <span class="modal-form-lable-name">Имя</span>
-            <input class="modal-form-input" type="text" name="user-name" />
-          </label>
+        <div class="modal-form-conect">
+          <input
+            class="modal-form-input"
+            type="text"
+            name="user-name"
+            id="name"
+          /><label class="modal-form-label" for="name">Имя</label>
+          <svg class="icon-form" width="18" height="18">
+            <use href="./image/sprite.svg#icon-form-name"></use>
+          </svg>
         </div>
-        <div>
-          <label class="modal-form-conect">
-            <svg class="icon-form-phone" width="18" height="18">
-              <use href="./image/sprite.svg#icon-form-phone"></use>
-            </svg>
-            <span class="modal-form-label-phone">Телефон</span>
-            <input class="modal-form-input" type="text" name="user-tel" />
-          </label>
+
+        <div class="modal-form-conect">
+          <input
+            class="modal-form-input"
+            type="text"
+            name="user-tel"
+            id="phone"
+          />
+          <label class="modal-form-label" for="phone">Телефон </label>
+          <svg class="icon-form" width="18" height="18">
+            <use href="./image/sprite.svg#icon-form-phone"></use>
+          </svg>
         </div>
-        <div>
-          <label class="modal-form-conect">
-            <svg class="icon-form-mail" width="18" height="18">
-              <use href="./image/sprite.svg#icon-form-mail"></use>
-            </svg>
-            <span class="modal-form-label-mail">Почта</span>
-            <input class="modal-form-input" type="text" name="user-email" />
-          </label>
+
+        <div class="modal-form-conect">
+          <input
+            class="modal-form-input"
+            type="text"
+            name="user-email"
+            id="e-mail"
+          />
+          <label class="modal-form-label" for="e-mail">Почта </label>
+          <svg class="icon-form" width="18" height="18">
+            <use href="./image/sprite.svg#icon-form-mail"></use>
+          </svg>
         </div>
 
         <textarea class="modal-message" placeholder="Коментарий"></textarea>

@@ -588,35 +588,45 @@ h1 {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-/* для иконки ИМЯ,ТЕЛЕФОН, МЕЙЛ */
-.icon-form-name,
-.icon-form-phone,
-.icon-form-mail {
+.modal-form-input:focus + .modal-form-label {
+  color: var(--accent-color);
+  transform: translateY(-40px);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus ~ .icon-form {
+  fill: var(--accent-color);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus {
+  outline: none;
+  padding-left: 42px;
+  border: 1px solid #2196f3;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-label {
   position: absolute;
-  top: 50%;
-  left: 16px;
+  top: 30%;
+  left: 42px;
+  font-size: 12px;
+  line-height: 1.16em;
   transform: translateY(-50%);
 }
 
-/* позиционирование лейбла  ИМЯ,ТЕЛЕФОН,МЕИЛ */
-.modal-form-lable-name,
-.modal-form-label-phone,
-.modal-form-label-mail {
+/* для иконки ИМЯ,ТЕЛЕФОН,МЕЙЛ */
+.icon-form {
   position: absolute;
-  top: 10%;
-  left: 42px;
-  font-size: 14px;
-  color: var(--subtext-color);
-  letter-spacing: 0.01em;
-}
-.modal-form-input:focus,
-.modal-form-input:hover {
-  outline: none;
-  border: 1px solid #2196f3;
-  padding-left: 40px;
-}
-.modal-form-conect:focus-within icon-form-name {
-  fill: var(--accent-color);
+  top: 15%;
+  left: 22px;
+  transform: translateX(-35%);
 }
 
 /* Стилизация rextarea */
@@ -627,11 +637,13 @@ h1 {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-bottom: 20px;
+  outline: none;
 }
 /* стилизация плейсхолдера в модал меседж */
 .modal-message::placeholder {
   padding: 12px 16px;
 }
+
 /* Стилизация соглашения на рассылку */
 .modal-form-optional-label {
   margin-bottom: 30px;
