@@ -230,6 +230,7 @@ h1 {
   border-radius: 4px;
   outline: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 
   transition-property: box-shadow;
   transition-duration: 250ms;
