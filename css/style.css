@@ -215,15 +215,7 @@ h1 {
   text-align: center;
   outline: none;
 }
-/* Кнопка для закрытия модальног окна */
-.modal-close-btn {
-  position: absolute;
-  top: -6px;
-  left: 97%;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-}
+
 /* ховер на кнопке-герое */
 .button:hover,
 .button:focus {
@@ -817,10 +809,6 @@ modal-form-input когда у того не показывается плейс
   background-color: var(--accent-color);
 }
 
-/* .modal-form-checkbox:checked ~ .icon-check-modal {
-  fill: #000;
-} */
-
 /* Стилизация текста чекбокса */
 .modal-form-option-span {
   font-size: 14px;
@@ -842,6 +830,32 @@ modal-form-input когда у того не показывается плейс
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
+
+/* Кнопка для закрытия модальног окна */
+.modal-close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  outline: none;
+  fill: var(--subtext-color);
+}
+/* Кнопка закрытия */
+.modal-close-btn-svg {
+  width: 11px;
+  height: 11px;
+}
+/* Фокус на кнопку закрытия */
+.modal-close-btn:focus,
+.modal-close-btn:hover {
+  fill: var(--accent-color);
+}
+
 /* что бы спрятать модальное окно */
 .is-hidden {
   opacity: 0;
